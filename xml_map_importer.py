@@ -364,22 +364,19 @@ class IMPORT_OT_xml_map(Operator, ImportHelper):
 
         cache_key = f"{library_name}_{group_name}_{prop_name}"
         
-
         mesh_data = None
         material = None
         
         if self.use_caching and cache_key in self._mesh_cache:
-
-            mesh_data = self._mesh_cache[cache_key]
+            # get the cached mesh data, but make a copy when you need a different material
+            original_mesh_data = self._mesh_cache[cache_key]
+            mesh_data = original_mesh_data.copy()
             
-
             if texture_name and texture_name in self._material_cache:
                 material = self._material_cache[texture_name]
         else:
-
             mesh_data = self.import_mesh_data(context, mesh_path, library_name, prop_name)
             
-
             if self.use_caching and mesh_data:
                 self._mesh_cache[cache_key] = mesh_data
         
