@@ -1,13 +1,14 @@
-# Tanki XML Map Importer for Blender
+# Tanki XML Map Importer/Exporter for Blender
 
-A Blender addon that imports the old XML map files from Tanki online into Blender.
-Its pretty slow currently, blender will freeze for a bit after you import your map.
+A Blender addon that imports and exports the old XML map files from Tanki online into Blender.
+Its pretty slow currently, blender will freeze for a bit after you import your map. (Exporting is fast c: )
 
 ## Features
 
-- Import XML map files with proper positioning of all props
+- Import XML map files with proper positioning of all props (It doesnt import collisions, spawn points, foliage)
 - Automatically load textures
 - Configure coordinate system conversions (unnecessary)
+- Export XML map files with proper positioning of all props (it doesnt export collisions, spawn points, foliage. If you want collisions, just import the map in Alternativa Editor and export it again)
 
 ## Requirements
 
@@ -33,9 +34,18 @@ Select the .py file you downloaded and you should be good to go.
 
 ## Usage
 
+###Importing
+
 1. Go to File > Import > XML Map (.xml)
 2. Select your XML map file
 3. Configure import options
 4. Click "Import XML Map"
+
+###Exporting
+
+1. Go to File > Export > XML Map (.xml)
+2. Select save location
+3. Configure export options
+4. Click "Export XML Map"
 
 
