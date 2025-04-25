@@ -34,14 +34,14 @@ Select the .py file you downloaded and you should be good to go.
 
 # Usage
 
-##Importing
+## Importing
 
 1. Go to File > Import > XML Map (.xml)
 2. Select your XML map file
 3. Configure import options
 4. Click "Import XML Map"
 
-##Exporting
+## Exporting
 
 1. Go to File > Export > XML Map (.xml)
 2. Select save location
